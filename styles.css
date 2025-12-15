@@ -3,13 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 body {
-  font-family: poppins, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   background-color: white;
-  max-width: 1400px;
   margin: 0 auto;
 }
 a {
@@ -41,6 +40,14 @@ nav .right a:last-child {
 nav .right a span {
   margin-left: 5px;
 }
+.right {
+  display: flex;
+  align-items: center;
+}
+.email-link {
+  display: flex;
+  align-items: center;
+}
 /* hero section */
 
 .hero-section {
@@ -49,39 +56,26 @@ nav .right a span {
   padding: 0 50px;
   margin: 50px 0;
   align-items: center;
-  gap: 50px;
+  margin-bottom: 100px;
+  gap: 40px;
 }
 .hero-section .text h2 {
   font-size: 40px;
+  font-weight: 500;
 }
 .hero-section .text p {
   margin-top: 20px;
   font-size: 18px;
   line-height: 1.6;
-  color: #555;
 }
-.hero-section .link {
-  margin-top: 30px;
-}
-.hero-section .link a {
-  display: inline-block;
-  padding: 5px 10px;
-  border: 2px solid black;
-  border-radius: 5px;
-  margin-right: 5px;
-}
-.hero-section .link a:hover {
-  background-color: rgb(212, 137, 137);
-  color: white;
-  transition: 0.3s;
-}
+
 .hero-section .photo img {
- width: 300px;
+  width: 300px;
   height: 300px;
-  border-radius: 50%;
   object-fit: cover;
-  
+  border-radius: 50%;
 }
+
 /* skills section */
 
 .skills-section {
@@ -90,11 +84,14 @@ nav .right a span {
 }
 .skills-section h2 {
   font-size: 36px;
+  font-weight: 500;
   text-align: center;
 }
 .skills-section .text {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 18px;
 }
 .skills-section .cells {
   display: flex;
@@ -123,53 +120,28 @@ nav .right a span {
 }
 .contact-section h2 {
   font-size: 35px;
+  font-weight: 500;
 }
-.contact-section .group {
+.contact-info p {
+  margin-top: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.contact {
   display: flex;
-  gap: 60px;
+  align-items: center;
+  margin-top: 15px;
+  gap: 8px;
 }
-.contact-section .group .text {
-  flex: 1;
-  margin-top: 20px;
-}
-.contact-section .group form {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-}
-.contact-section .group form input,
-.contact-section .group form textarea {
-  font-family: poppins, sans-serif;
-  border: 2px solid rgb(9, 116, 238);
-  background-color: transparent;
-  padding: 10px;
-  margin-bottom: 15px;
-  outline: none;
-  resize: none;
-}
-.contact-section .group form button {
-  font-size: 16px;
-  font-family: poppins, sans-serif;
-  color: white;
-  background-color: rgb(9, 128, 233);
-  border: none;
-  height: 50px;
-  cursor: pointer;
-}
-.contact-section .group form button:hover {
-  background-color: rgb(9, 146, 231);
-  transition: 0.3s;
-}
-.contact-section .group .text form {
-  margin-right: 20px;
-}
+
 /* 1 */
 @media (max-width: 800px) {
   .hero-section {
     flex-direction: column-reverse;
   }
   .hero-section .photo img {
-    width: 250px;
+    height: 200px;
+    width: 200px;
   }
   .contact-section .group {
     flex-direction: column;
@@ -178,21 +150,35 @@ nav .right a span {
     display: none;
     flex-direction: column;
   }
+  .hero-section .text h2 {
+    font-size: 20px;
+  }
 }
 /* 2 */
 @media (max-width: 600px) {
   nav {
     padding: 0 20px;
   }
-  nav .right a {
-    font-size: 22px;
-  }
-  nav .right a:last-child {
-    color: white;
-    background-color: black;
-    padding: 0 10px;
-  }
+
   nav .right a span {
     display: none;
+  }
+  nav .left h1 {
+    font-size: 17px;
+  }
+  nav .right a:last-child {
+    padding: 3px 8px;
+    font-size: 12px;
+  }
+  .skills-section h2 {
+    font-size: 20px;
+  }
+  .skills-section .cells .cell img {
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+  }
+  .contact-section h2 {
+    font-size: 20px;
   }
 }
