@@ -164,8 +164,8 @@ nav .right a span {
     font-size: 20px;
   }
   .hero-section .photo img {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
   }
   nav {
     padding: 0 20px;
@@ -202,5 +202,5 @@ nav .right a span {
   }
 }
 section {
-  height: 50vh;
+  height: 100vh;
 }
